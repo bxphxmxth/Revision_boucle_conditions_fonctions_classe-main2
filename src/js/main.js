@@ -29,15 +29,15 @@
 // - Demander un nombre maximal et afficher si le nombre est paire de 0 au nombre maximal(for)
 // - Ex: `Le nombre x est paire`
 
-let nbr = prompt("choisis un nombre");
+// let nbr = prompt("choisis un nombre");
 
-for (let i = 0; i < nbr; i++){
-     if(i % 2 == 0){
-          console.log(`${i} est pair`);
-     }else{
-          console.log(`${i} est impair`);
-     }
-}
+// for (let i = 0; i < nbr; i++){
+//      if(i % 2 == 0){
+//           console.log(`${i} est pair`);
+//      }else{
+//           console.log(`${i} est impair`);
+//      }
+// }
 
 
 
@@ -47,26 +47,39 @@ for (let i = 0; i < nbr; i++){
 
 // let classe = [];
 // let etudiants = ["ali", "agim","jean", "ilias", "elvis"]
+// let i = 0;
 
-// while(classe < 5){
-//      classe.push(etudiants[0])
+// do{
+//      classe.push(etudiants[i]);
+//      i++;
 
 // }
+// while (i < 5)
 // console.log(classe);
 
-// # Exercice 5
+
+// # Exercice 5 OKI
 // - Dans la classe de la coding 13 il y a Martin, Maxime, Jordano, Yasmina, Kawtar, Valentin, Oussama, Cactus, Fanny, Sergen, Karis, Kadri, Piere, Zidane, Imad, Abdel.
 // - Affichez les prenoms des etudiants et si leurs index est paire ou impaire.
 // - Afficher a la fin touts les etudiants qui avaient des index paires ou impaires (forEach)
 
-// let cod13 = ["Martin", "Maxime", "Jordano", "Yasmina"];
+// let cod13 = ["Martin", "Maxime", "Jordano", "Yasmina", "Jordano", "Kawtar", "Zidane"];
+
 
 // cod13.forEach(element =>{
-//      console.log(`voici ${element}`);
+//      if(cod13.indexOf(element) % 2 == 0){
+          
+//           console.log(` ${element} est pair`);
+
+//      }else{
+//           console.log(` ${element} est impair`);
+//      }
 // })
 
+
+
 // CONDITIONS
-// # Exercice 1
+// # Exercice 1 OKI
 // - A l'aide de 2 prompts, demender 2 nombres et dire quel est le plus grand
 
 // let nb1 = prompt("choisis un nombre");
@@ -82,7 +95,7 @@ for (let i = 0; i < nbr; i++){
 // }
 
 
-// # Exercice 2
+// # Exercice 2 OKI
 // - A l'aide d'un prompt, demander un nombre
 // - Afficher si le nombre est paire ou impaire 
 
@@ -93,23 +106,25 @@ for (let i = 0; i < nbr; i++){
 //      console.log("pas pair");
 // }
 
-// # Exercice 3
+// # Exercice 3 OKI
 // - A l'aide d'un prompt, demande le prenom
 // - Afficher `Votre prenom a moins de 5 caractères` si la taille du prenom est < 5
 // - Afficher `Votre prenom a  5 caractères` si la taille du prenom est == 5
 // - Afficher `Votre prenom a plus de 5 caractères` si la taille du prenom est > 5
 
 // let prenom = prompt("entre un prenom");
-// if(prenom.charAt() < 5){
+// if(prenom.length < 5){
 //      console.log("votre prénom a moins de 5 caracteres");
 
+// }else if(prenom.length == 5){
+//      console.log("est égal");
 // }else{
-//      console.log("il a +");
+//      console.log("votre prénom à + de 5 caractères");
 // }
 
 
 
-// # Exercice 4
+// # Exercice 4 OKII
 
 // - Entrez 2 prenoms via des prompts
 // - Afficher `Prenom1 a moins de caractères que Prenom2` si la taille de prenom1 est < taille de prenom2
@@ -119,9 +134,16 @@ for (let i = 0; i < nbr; i++){
 // let prenom = prompt("entre un prenom");
 // let prenom2 = prompt("entre un prenom");
 
+// if(prenom.length < prenom2.length){
+//      console.log(`${prenom} a moins de caractère que ${prenom2}`);
+// }else if(prenom.length == prenom2.length){
+//      console.log(`${prenom} a le même nombre de caractère que ${prenom2}`);
+// }else{
+//      console.log(`${prenom} a plus de caractère que ${prenom2}`);
+// }
 
 
-// # Exercice 5
+// # Exercice 5 OKI
 
 // - Entrez votre vitesse
 // - La vitesse limite de la route est 50km/h
@@ -140,7 +162,7 @@ for (let i = 0; i < nbr; i++){
 //      alert("attention t'as dépassé la limite")
 // }
 
-// # Exercice 6
+// # Exercice 6 OKI
 // - Demander le prenom et l'age d'une personne.
 // - Afficher `Salut, nom de la personne! Vu que t'as l'age de la personne ans, ce soir tu peux sortir en discoteque` si la est >= 18
 // - Afficher `Salut, nom de la personne! Vu que t'as l'age de la personne ans, aujourd'hui tu iras au cinema` si la est < 18
@@ -155,14 +177,26 @@ for (let i = 0; i < nbr; i++){
 // }
 
 
-// # Exercice 7
+// # Exercice 7 OKI
 // - Entrer 2 nombres et demander quel operateur on veut utilizer
 // - Afficher le resultat pour l'operateur choisis
 // - Ex: 3 * 2 = 6
 
-// let nb1 = prompt("choisi un nombre");
-// let nb2 = prompt("choisi un autre nombre");
- 
+// let nb1 = parseInt(prompt("choisi un nombre"));
+// let op = prompt(" choisis un opérateur")
+// let nb2 = parseInt(prompt("choisi un autre nombre"));
+
+// if(op == "+"){
+//      console.log(`${nb1+nb2}`);
+// }else if (op == "-"){
+//      console.log(`${nb1-nb2}`);
+// }else if (op == "*"){
+//      console.log(`${nb1*nb2}`);
+// }else if(op == "/"){
+//      console.log(`${nb1/nb2}`);
+// }else{
+//      console.log("choisis un opérateur correct");
+// }
 
 //FONCTIONS
 
@@ -186,20 +220,23 @@ for (let i = 0; i < nbr; i++){
 // # Exercice 2
 // - Créer un programme qui va convertir la premiere lettre d'un mot en majuscule et qui va afficher la longueur de ce mot via une console.log
 
+// Ajout d'un lowercase 
+
 // let conv = (mot) =>{
-//      mot.charAt(0).toUppercase;
+//      console.log(mot.charAt(0).toUpperCase()+mot.substring(1,mot.length).toLowerCase());
 // }
 
-// let conv();
+// conv("nASILA");
 
 
 // # Exercice 3 
 // - Créer un programme qui va nous afficher la date d'aujourd'hui avec le format jj/dd/aaaa
 
+
+
 // let today = new Date().toLocaleDateString()
 
 // console.log(today)
-
 
 
 // # Exercice 4
@@ -209,22 +246,119 @@ for (let i = 0; i < nbr; i++){
 
 
 
+
 //      # Exercice 5
-// - Créer un programme qui prend deux paramètres. Un nom et un résultat. Si le résultat est supérieur à 90, vous placé le personnage dans un array nommé "Réussite". Si le résultat est égal ou supérieur à 50, vous les placer dans un array nommé "Remediation". Sinon vous le placer dans un tableau nommé "Echec". Pour les étudiants qui font partie du groupe "Remediation", vous faites en sortes qu'ils viennent 7jours pour une remediation (boucle) et le prouver avec une console.log "personnage s'est présenter à l'école".
+// - Créer un programme qui prend deux paramètres. Un nom et un résultat. Si le résultat est supérieur à 90, vous placé le personnage dans un array nommé "Réussite". Si le résultat est égal ou supérieur à 50, vous les placer dans un array nommé "Remediation". Sinon vous le placer dans un tableau nommé "Echec". 
+
+// Pour les étudiants qui font partie du groupe "Remediation", vous faites en sortes qu'ils viennent 7jours pour une remediation (boucle) et le prouver avec une console.log "personnage s'est présenter à l'école".
+
+// let reussite = [];
+// let remediation = [];
+// let echec = [];
+// let ecole =[];
+
+// let point = (nom, resultat) =>{
+//      if(resultat > 90){
+//           reussite.push(nom);
+//           console.log(`Bravo tu a + de 90 `);
+
+//      }else if(resultat >= 50){
+//           remediation.push(nom);
+//           console.log(`Sorry tu vas en remédiation`);
+//           for(let i = 0; i < 7; i ++){
+//                console.log(`${nom} est à l'école`);
+//                ecole.push(nom)
+//                console.log(ecole);
+//           }
+          
+//      }else{
+//           echec.push(nom)
+//           console.log(`Sorry tu as raté`);
+
+
+//      }
+// }
+
+// point("nasila", 50);
 
 // # Exercice 6 
 // - Créer un programme qui va prendre les présence. Il prendra deux paramètres, nom et la présence.
 // - Si l'étudiant est présent, vous le placé dans une classe. 
 // - Sinon vous le placé dans un array "Absent". 
 // - Retournez le résultat via une console.log, affiché chaque personne absente avec une phrase du style "L'eleve x a été absent"
+// let classe = [];
+// let absent = [];
+
+
+// let tla = (nom, presence)=> {
+//      if(presence == "présent"){
+//           classe.push(nom);
+//      }else{
+//           absent.push(nom);
+//      }
+// }
+
+// tla("nasila", "présent")
+// tla("mouna", "absent");
+// console.log(classe);
+// console.log(absent);
+
+
 
 // # Exercice 7
 // - Créer un programme qui une fois déclenché, va nous renvoyer une alert de warning "Attention un virus a été détecté" tout les deux secondes.
+
+// let virus = () =>{
+// }
+
+// virus();
+
+
+// setInterval(function(){ 
+//      alert("Attention un virus a été détecté");
+
+
+// }, 2000);
+
 
 // # Exercice 8
 // - Créer une fonction qui doit donner ce résultat "BoNjOuR à ToUs". C-à-d mettre une lettre en majuscule une fois sur deux
 
 
+// let az = (mot) =>{
+//      if(mot.charAt() % 2 == 0){
+//           mot.charAt().toUpperCase;
+//           console.log(mot);
+
+//      }else{
+//           console.log('sldfkjdsf');
+//      }
+// }
+
+// az("nasila");
+
+let capitalizee = (mot) =>{
+     for(let i = 0; i <  mot.length; i++){
+          if(i % 2 == 0){
+               mot.charAt(i).toUppeCase;
+               console.log(mot);
+          }
+     }
+
+}
+
+capitalizee("nasila");
+
+
+// if(i%2 == 0){
+//      (temp.substring(i,i+1)).toUpperCase();
+//      outStr += temp;
+//      temp="";
+//      }else{
+//      (temp.substring(i,i+1)).toLowerCase();
+//      outStr += temp;
+//      temp="";
+//      }
 // # Exercice 9
 // - Créer un programme qui calcule le prix du produit avec TVA (la TVA vaut 1.196). 
 // - Le programme prendra deux paramètres, le nom du produit et le prix du produit HTV.
