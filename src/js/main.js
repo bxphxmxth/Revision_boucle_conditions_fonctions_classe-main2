@@ -457,25 +457,50 @@
 // - Créé un objet du nom de 'Article'. Il prendra plusieurs propriétés. (nomProduit, prixHT)
 // - Créé une méthode propre à l'objet qui va calculer le prix du produit avec TVA (la TVA vaut 1.196)
 // let TVA = 1.196;
-let article = {
-     nomProduit : "souris",
-     prixHT : 5,
-     calcul(){
+// let article = {
+//      nomProduit : "souris",
+//      prixHT : 5,
+//      calcul(){
           
-          console.log(`Le/La ${article.nomProduit} vaut ${article.prixHT * 1.196} TVA comprise ` );
-     }
-}
+//           console.log(`Le/La ${article.nomProduit} vaut ${article.prixHT * 1.196} TVA comprise ` );
+//      }
+// }
 
-article.calcul();
+// article.calcul();
 
 // # Exo 5
 // - Créé un objet VIDE. Ajoute des propriétés (produit, prix, stock, réputation) à ton objet.
 // - Supprime 'réputation' de l'objet et affiche l'objet via une console.log
 
+// let objet ={
+//      produit: "clavier",
+//      prix: 50,
+//      stock: 140,
+//      reputation: "bonne",
+//      delete(){
+//           objet.reputation.slice(objet.reputat;
+//           console.log(objet.reputation);
+//      }
+// }
+
+// objet.delete();
+
 // # Exo 6
 // - Créé un objet pour une marque de voiture. Déclare plusieurs propriétés (marque, model, type, color, prix)
 // - Créé une méthode qui va retourner une phrase du style : "Ma audi a6 est de type break. Elle est grise et vaut 20.000€"
 
+let voiture ={
+     marque: "Fiat",
+     model: "Panda",
+     type: "Toup",
+     color: "Black & Pink",
+     prix: "3",
+     maMethode(){
+          console.log(`Ma ${this.marque} ${this.model} est de type ${this.type}. Elle est ${this.color} et vaut seulement ${this.prix}€`);
+     }
+}
+
+voiture.maMethode();
 // # Exo 7 
 // - Crée un objet qui représente MolenGeek. Il prendra plusieurs propriétés -> 
 // nombre d'employés = nombre au choix, 
