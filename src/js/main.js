@@ -424,38 +424,49 @@
 
 // personne.method();
 
-// # Exo 3
+// # Exo 3 OKI
 // - Créé un Personnage avec plusieurs propriétés ( nom, prenom, argent)
 // - Créé un objet du nom de 'Article'. Il prendra plusieurs propriétés (nomProduit, prix, stock)
 // - Créé une méthode propre au personnage qui va permettre d'acheter l'article. (Attention à l'argent et le stock)
 
 
-let personnage = {
-     nom: "uchiha",
-     prenom: "sasuke",
-     argent: 540,
-     acheter(){
-          this.argent -= objet.prix;
-          console.log(`${this.argent}`);
-          objet.stock -= 1;
-          console.log(objet.stock);
-          console.log(`${this.prenom} a acheté un ${objet.nomProduit} à ${objet.prix}€`);
+// let personnage = {
+//      nom: "uchiha",
+//      prenom: "sasuke",
+//      argent: 540,
+//      acheter(){
+//           this.argent -= objet.prix;
+//           console.log(`${this.argent}`);
+//           objet.stock -= 1;
+//           console.log(objet.stock);
+//           console.log(`${this.prenom} a acheté un ${objet.nomProduit} à ${objet.prix}€`);
 
-     }
+//      }
 
-}
+// }
 
-let objet = {
-     nomProduit: "Eventail",
-     prix: 30,
-     stock: 5,
-}
+// let objet = {
+//      nomProduit: "Eventail",
+//      prix: 30,
+//      stock: 5,
+// }
 
-personnage.acheter();
+// personnage.acheter();
 
 // # Exo 4
 // - Créé un objet du nom de 'Article'. Il prendra plusieurs propriétés. (nomProduit, prixHT)
 // - Créé une méthode propre à l'objet qui va calculer le prix du produit avec TVA (la TVA vaut 1.196)
+// let TVA = 1.196;
+let article = {
+     nomProduit : "souris",
+     prixHT : 5,
+     calcul(){
+          
+          console.log(`Le/La ${article.nomProduit} vaut ${article.prixHT * 1.196} TVA comprise ` );
+     }
+}
+
+article.calcul();
 
 // # Exo 5
 // - Créé un objet VIDE. Ajoute des propriétés (produit, prix, stock, réputation) à ton objet.
