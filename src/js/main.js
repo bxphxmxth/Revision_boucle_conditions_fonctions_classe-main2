@@ -339,18 +339,19 @@
 
 // capitalizee("nasila");
 
-// # Exercice 9
+// # Exercice 9 OKI
 // - Créer un programme qui calcule le prix du produit avec TVA (la TVA vaut 1.196). 
 // - Le programme prendra deux paramètres, le nom du produit et le prix du produit HTV.
 // - Retourner le résultat via un console.log "le produit x vaut x € avec TVA"
 
 
-let calcul = (nom,prix) =>{
-     let TVA = prix * 1.196;
-     console.log(`le/la ${nom} TVAC est égal à ${TVA}`);
-}
+// let calcul = (nom,prix) =>{
+//      let TVA = prix * 1.196;
+//      console.log(`le/la ${nom} TVAC est égal à ${TVA}`);
+// }
 
-calcul("chocolat", 50);
+// calcul("chocolat", 50);
+// calcul("burger", 3)
 
 
 // # Exercice 10
@@ -360,6 +361,34 @@ calcul("chocolat", 50);
 // - e programme va trier et stocker le produit dans des tableaux par rapport a sa marque. 
 // (Ex: si vous lancez la méthode avec la marque granier, vous stocker le produit liée dans un array produitGranier.)
 // - Faite en sorte d'afficher chaque nom de produit via une console.log en mettant la 1er lettre en majuscule
+
+let produitNivea = [];
+let produitDove = [];
+let produitAutres = [];
+let produitsAutres = [];
+
+
+let tri = (nomEntreprise, nomProduit) =>{
+     if(nomEntreprise== "Nivea"){
+          produitNivea.push(nomProduit)
+          console.log(produitNivea);
+     }else if(nomEntreprise == "Dove"){
+          produitDove.push(nomProduit);
+          console.log(produitDove);
+
+     } else{
+          produitsAutres.push(nomProduit);
+          console.log(produitAutres);
+     }
+
+}
+
+tri("Nivea", "crème ");
+tri("Dove", "shampooing");
+tri("Nissan", "voiture");
+
+
+
 
 
 //OBJET 
