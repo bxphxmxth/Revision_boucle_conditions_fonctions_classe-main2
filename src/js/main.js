@@ -362,44 +362,67 @@
 // (Ex: si vous lancez la méthode avec la marque granier, vous stocker le produit liée dans un array produitGranier.)
 // - Faite en sorte d'afficher chaque nom de produit via une console.log en mettant la 1er lettre en majuscule
 
-let produitNivea = [];
-let produitDove = [];
-let produitAutres = [];
-let produitsAutres = [];
+// let produitNivea = [];
+// let produitDove = [];
+// let produitAutres = [];
+// let produitsAutres = [];
 
 
-let tri = (nomEntreprise, nomProduit) =>{
-     if(nomEntreprise== "Nivea"){
-          produitNivea.push(nomProduit)
-          console.log(produitNivea);
-     }else if(nomEntreprise == "Dove"){
-          produitDove.push(nomProduit);
-          console.log(produitDove);
+// let tri = (nomEntreprise, nomProduit) =>{
+//      if(nomEntreprise== "Nivea"){
+//           produitNivea.push(nomProduit)
+//           console.log(produitNivea);
+//      }else if(nomEntreprise == "Dove"){
+//           produitDove.push(nomProduit);
+//           console.log(produitDove);
 
-     } else{
-          produitsAutres.push(nomProduit);
-          console.log(produitAutres);
-     }
+//      } else{
+//           produitsAutres.push(nomProduit);
+//           console.log(produitAutres);
+//      }
 
-}
+// }
 
-tri("Nivea", "crème ");
-tri("Dove", "shampooing");
-tri("Nissan", "voiture");
-
-
-
+// tri("Nivea", "crème ");
+// tri("Dove", "shampooing");
+// tri("Nissan", "voiture");
 
 
 //OBJET 
 // # Exo 1
 // - Créé un objet avec plusieurs propriétés (nom, prenom, age, mail) dont un est un objet avec ses propres propriétés
 
+// let personne = {
+//      nom: "Aala",
+//      prenom: "Nasila",
+//      age: 24,
+//      mail :{
+//           mail1 : "oveurdoze_de_manga@hotmail.fr",
+//           mail2 : "alexlemarteaux@hotmail.com",
+//      }
+
+// }
+
+// console.log(personne.mail.mail1);
 
 // # Exo 2 
 // - Crée un objet avec un nom, un age et une méthode
 // - La méthode de votre objet lance un prompt permetant de changer son age
 // - Une alert renvoi l'age de votre objet avec la phrase "Vous avez x ans"
+
+let personne = {
+     nom: "Nasila",
+     age: 24,
+     method(){
+          personne.age = prompt("Choisis un âge");
+          console.log(`${this.nom} a maintenant ${personne.age} ans`);
+
+     }
+     
+}
+
+
+personne.method();
 
 // # Exo 3
 // - Créé un Personnage avec plusieurs propriétés ( nom, prenom, argent)
