@@ -410,24 +410,48 @@
 // - La méthode de votre objet lance un prompt permetant de changer son age
 // - Une alert renvoi l'age de votre objet avec la phrase "Vous avez x ans"
 
-let personne = {
-     nom: "Nasila",
-     age: 24,
-     method(){
-          personne.age = prompt("Choisis un âge");
-          console.log(`${this.nom} a maintenant ${personne.age} ans`);
+// let personne = {
+//      nom: "Nasila",
+//      age: 24,
+//      method(){
+//           personne.age = prompt("Choisis un âge");
+//           console.log(`${this.nom} a maintenant ${personne.age} ans`);
 
-     }
+//      }
      
-}
+// }
 
 
-personne.method();
+// personne.method();
 
 // # Exo 3
 // - Créé un Personnage avec plusieurs propriétés ( nom, prenom, argent)
 // - Créé un objet du nom de 'Article'. Il prendra plusieurs propriétés (nomProduit, prix, stock)
 // - Créé une méthode propre au personnage qui va permettre d'acheter l'article. (Attention à l'argent et le stock)
+
+
+let personnage = {
+     nom: "uchiha",
+     prenom: "sasuke",
+     argent: 540,
+     acheter(){
+          this.argent -= objet.prix;
+          console.log(`${this.argent}`);
+          objet.stock -= 1;
+          console.log(objet.stock);
+          console.log(`${this.prenom} a acheté un ${objet.nomProduit} à ${objet.prix}€`);
+
+     }
+
+}
+
+let objet = {
+     nomProduit: "Eventail",
+     prix: 30,
+     stock: 5,
+}
+
+personnage.acheter();
 
 // # Exo 4
 // - Créé un objet du nom de 'Article'. Il prendra plusieurs propriétés. (nomProduit, prixHT)
@@ -467,6 +491,7 @@ personne.method();
 // - Une fois réalisée, vous créez une méthode du nom de "random". Elle va vous permettre de choisir une commune aléatoire entre les trois nouvelles communes.Vous assignez cette nouvelle commune autant que la nouvelle communePreferer
 
 // - Affichez via une console.log la nouvelle ville de Bruxelles.
+
 
 
 
