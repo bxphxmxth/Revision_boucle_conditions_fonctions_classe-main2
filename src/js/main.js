@@ -324,45 +324,34 @@
 // # Exercice 8
 // - Créer une fonction qui doit donner ce résultat "BoNjOuR à ToUs". C-à-d mettre une lettre en majuscule une fois sur deux
 
+// let capitalizee = (mot) =>{
+//      for(let i = 0; i <  mot.length; i++){
+//           if(i % 2 == 0){
+//                i++;
+//                mot.charAt(i).toUppeCase;
+//                console.log(mot);
+//           }else{
 
-// let az = (mot) =>{
-//      if(mot.charAt() % 2 == 0){
-//           mot.charAt().toUpperCase;
-//           console.log(mot);
-
-//      }else{
-//           console.log('sldfkjdsf');
+//           }
 //      }
+
 // }
 
-// az("nasila");
+// capitalizee("nasila");
 
-let capitalizee = (mot) =>{
-     for(let i = 0; i <  mot.length; i++){
-          if(i % 2 == 0){
-               mot.charAt(i).toUppeCase;
-               console.log(mot);
-          }
-     }
-
-}
-
-capitalizee("nasila");
-
-
-// if(i%2 == 0){
-//      (temp.substring(i,i+1)).toUpperCase();
-//      outStr += temp;
-//      temp="";
-//      }else{
-//      (temp.substring(i,i+1)).toLowerCase();
-//      outStr += temp;
-//      temp="";
-//      }
 // # Exercice 9
 // - Créer un programme qui calcule le prix du produit avec TVA (la TVA vaut 1.196). 
 // - Le programme prendra deux paramètres, le nom du produit et le prix du produit HTV.
 // - Retourner le résultat via un console.log "le produit x vaut x € avec TVA"
+
+
+let calcul = (nom,prix) =>{
+     let TVA = prix * 1.196;
+     console.log(`le/la ${nom} TVAC est égal à ${TVA}`);
+}
+
+calcul("chocolat", 50);
+
 
 // # Exercice 10
 // - Créer un programme qui va trier des produits et leurs produits par rapport a leur marque. 
