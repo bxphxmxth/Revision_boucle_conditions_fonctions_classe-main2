@@ -847,75 +847,112 @@
 // ### Créer une class Objet
 // ### _Propriétés : nom, prix
 
-class Objet{
-     constructor(nom,prix){
+// class Objet{
+//      constructor(nom,prix){
+//           this.nom = nom;
+//           this.prix = prix;
+//      }
+// }
+
+
+
+// // III
+// // ### Créer deux instances d'objets avec un nom et un prix
+
+// let piano = new Objet("piano", 5000);
+// let basse = new Objet("basse", 1450 )
+
+// // ### Créer une boite (tableau) et mettre les deux objets dedans.
+
+// let boite = [];
+// boite.push(piano);
+// boite.push(basse);
+// console.log(boite);
+
+
+// // ### Créer une class Personnage
+// // ### _Propriétés : nom(string), sac(tableau), argent(number)
+// // ### _Méthode : prendre(objet, boite)
+// // ### _Méthode : acheter(vendeur, objet)
+
+// class Personnage{
+//      constructor(nom, sac, argent){
+//           this.nom = nom;
+//           this.sac = sac;
+//           this.argent = argent;
+//           this.prendre = (objet,boite) => {
+//                this.sac.push(objet);
+//                boite.splice(boite.indexOf(objet),1);
+//                console.log(`${this.nom} a mit un.e ${objet.nom} dans son sac`);
+
+//           };
+//           this.acheter = (vendeur, objet)=> {
+//                if(this.argent >= objet.prix){
+//                     this.argent -= objet.prix;
+//                     vendeur.argent += objet.prix;
+
+//                     this.sac.push(objet);
+//                     vendeur.sac.splice(vendeur.sac.indexOf(objet),1);
+//                     console.log(`${this.nom} a acheté un.e ${objet.nom} à ${vendeur.nom}`);
+//                }else{
+//                     console.log("no money");
+//                }
+//           }
+//      }
+// }
+
+
+// // ### Créer deux instances de Personnage et faites leur chacun [prendre] un objet de la boite avec leur méthode.
+
+// let naz = new Personnage("Naz", [], 8000);
+// console.log(naz.argent);
+// let moun = new Personnage("Moun",[], 10000);
+// console.log(moun.nom);
+
+// // ### Ensuite faites acheter à l'un des deux, l'objet de l'autre.
+
+// naz.prendre(basse,boite);
+// moun.prendre(piano,boite);
+
+// naz.acheter(moun,piano);
+// console.log(naz.argent);
+
+// moun.acheter(naz, basse);
+// console.log(moun.argent);
+
+// extends 
+
+class Humain{
+     constructor(nom, prenom, argent){
           this.nom = nom;
-          this.prix = prix;
-     }
-}
-
-
-
-// III
-// ### Créer deux instances d'objets avec un nom et un prix
-
-let piano = new Objet("piano", 5000);
-let basse = new Objet("basse", 1450 )
-
-// ### Créer une boite (tableau) et mettre les deux objets dedans.
-
-let boite = [];
-boite.push(piano);
-boite.push(basse);
-console.log(boite);
-
-
-// ### Créer une class Personnage
-// ### _Propriétés : nom(string), sac(tableau), argent(number)
-// ### _Méthode : prendre(objet, boite)
-// ### _Méthode : acheter(vendeur, objet)
-
-class Personnage{
-     constructor(nom, sac, argent){
-          this.nom = nom;
-          this.sac = sac;
+          this.prenom = prenom;
           this.argent = argent;
-          this.prendre = (objet,boite) => {
-               this.sac.push(objet);
-               boite.splice(boite.indexOf(objet),1);
-               console.log(`${this.nom} a mit un.e ${objet.nom} dans son sac`);
-
-          };
-          this.acheter = (vendeur, objet)=> {
-               if(this.argent >= objet.prix){
-                    this.argent -= objet.prix;
-                    vendeur.argent += objet.prix;
-
-                    this.sac.push(objet);
-                    vendeur.sac.splice(vendeur.sac.indexOf(objet),1);
-                    console.log(`${this.nom} a acheté un.e ${objet.nom} à ${vendeur.nom}`);
-               }else{
-                    console.log("no money");
-               }
-          }
      }
 }
 
+// classe enfant :
 
-// ### Créer deux instances de Personnage et faites leur chacun [prendre] un objet de la boite avec leur méthode.
+class Ecossais extends Humain{
+     constructor(nom, prenom, argent,region,langue){
+          super(nom, prenom,argent);
+          this.region = region;
+          this.langue = langue;
+     }
+}
 
-let naz = new Personnage("Naz", [], 8000);
-console.log(naz.argent);
-let moun = new Personnage("Moun",[], 10000);
-console.log(moun.nom);
+// deuxième classe enfant :
 
-// ### Ensuite faites acheter à l'un des deux, l'objet de l'autre.
+class Japonais extends Humain{
+     constructor(nom,prenom,argent, ramen, udon){
+          
+          super(nom,prenom,argent);
+          this.ramen = ramen;
+          this.udon = udon;
+     }
+}
 
-naz.prendre(basse,boite);
-moun.prendre(piano,boite);
+let lily = new Ecossais("Potter","Lily", 500, "Edimbourg", "anglais");
+let ritsu = new Japonais("Akiyama","Ritsu", 7000, "végé", "épicé" );
+console.log(lily);
+console.log(ritsu);
 
-naz.acheter(moun,piano);
-console.log(naz.argent);
-
-moun.acheter(naz, basse);
-console.log(moun.argent);
