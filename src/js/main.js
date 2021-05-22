@@ -956,3 +956,106 @@ let ritsu = new Japonais("Akiyama","Ritsu", 7000, "végé", "épicé" );
 console.log(lily);
 console.log(ritsu);
 
+
+
+
+// If else exos
+
+
+// - # Les conditions - introduction
+//     1. ### Via un console.log() vérifie l'egalité entre 1 et "1"
+
+// let nb1 = 1
+// let nb2 = "1"
+
+// console.log(nb1 == nb2);
+
+
+//     2. ### Via un console.log() vérifie l'egalité STRICTE entre 1 et "1"
+// let nb1 = 1
+// let nb2 = "1"
+
+// console.log(nb1 === nb2);
+
+//     3. ### Créer un programme qui demande le prénom d'une personne, si le prénom de la personne comporte moins de 5 caractères, affichée une alerte avec comme message " Ton nom est trop court "
+
+// let prenom = prompt("Entre ton nom");
+
+// if(prenom.length < 5){
+//      alert("ton nom est trop court");
+// }else{
+//      alert("wuuu")
+// }
+
+
+
+//     4. ### Affiche une addition a l'utilisateur et demande lui de résoudre l'addition, si il répond juste, félicitez le, sinon dite lui que c'est incorrect.
+
+
+// let calcul = prompt("Combien font 5+5?")
+
+//      if(calcul == 10){
+//           alert("bravo");
+//      }else{
+//           alert("t serieux?");
+//      }
+
+
+
+//     5. ### Affiche une multiplication à l'utilisateur et demande lui de la résoudre, si il répond juste félicitez le "la réponse était bien xx" sinon dite lui, à combien d'unité il était de la réponse exemple si la réponse etait 35 et qu'il répont 40 renvoyez lui une alerte avec "C'est dommage, tu n'étais qu'a 5 unité de la bonne réponse"
+
+// let calcul = prompt("cmb font 5*5?");
+// let unite = 25 - calcul;
+
+// if(calcul == 25){
+//      alert("nice");
+// }else{
+//      alert(`dommage tu es à ${unite} de la bonne reponse`);
+// }
+
+
+//     6. ### Créer un programme qui permet d'ajouter des elements dans un tableau via des prompts quand le tableau contient 3 éléments, renvoyez une alerte avec le contenu du tableau
+
+// let tab = [];
+
+// let objet = prompt("ajoute un objet");
+// let objet2 = prompt("ajoute un objet");
+// let objet3 = prompt("ajoute un objet");
+
+// if (tab.length == 3){
+//      tab.push(objet);
+//      tab.push(objet2);
+//      tab.push(objet3);
+//      console.log(tab);
+// }
+
+//     7. ### Créer un programme qui permet a l'utilisateur de mettre des chiffres dans des bacs, si le chiffre est plus grand ou égal à 12 il va dans le bac "grandNombres" si il est plus petit que 12 il va dans le bac "petitNombres" affiche ensuite une seule alerte avec le contenu des deux bacs
+
+// let petit = [];
+// let grand = [];
+
+// let nb = prompt("entre un nombre");
+
+// if(nb >= 12){
+//      grand.push(nb);
+// }else{
+//      petit.push(nb);
+// }
+
+// console.log(grand);
+// console.log(petit);
+
+
+
+//     8. ### Invente un exercice avec ce que tu as appris en Javascript jusqu'a maintenant en incluent des conditions
+// let question = prompt("Choisis un nombre entre 0 et 10");
+// let nombre = Math.floor(Math.random()*10);
+
+// if(nombre == question){
+//      alert("Bien joué wah , go acheter un ticket de lotto");
+// }else if(nombre > 10){
+//      alert("on a dit entre 0 et 10");
+
+// }else{
+//      alert("raté gros nul");
+// }
