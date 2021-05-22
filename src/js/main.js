@@ -489,23 +489,44 @@
 // - Créé un objet pour une marque de voiture. Déclare plusieurs propriétés (marque, model, type, color, prix)
 // - Créé une méthode qui va retourner une phrase du style : "Ma audi a6 est de type break. Elle est grise et vaut 20.000€"
 
-let voiture ={
-     marque: "Fiat",
-     model: "Panda",
-     type: "Toup",
-     color: "Black & Pink",
-     prix: "3",
-     maMethode(){
-          console.log(`Ma ${this.marque} ${this.model} est de type ${this.type}. Elle est ${this.color} et vaut seulement ${this.prix}€`);
-     }
-}
-
-voiture.maMethode();
+// let voiture ={
+//      marque: "Fiat",
+//      model: "Panda",
+//      type: "Toup",
+//      color: "Black & Pink",
+//      prix: "3",
+//      maMethode(){
+//           console.log(`Ma ${this.marque} ${this.model} est de type ${this.type}. Elle est ${this.color} et vaut seulement ${this.prix}€`);
+//      }
+// }
+ 
+// voiture.maMethode();
 // # Exo 7 
 // - Crée un objet qui représente MolenGeek. Il prendra plusieurs propriétés -> 
 // nombre d'employés = nombre au choix, 
 // patron:{nom, prenom}, 
 // newEmploye = [],
+
+// let molengeek = {
+//      nbrEmployes : 50,
+//      patron: {
+//           nom: "Aala",
+//           prenom: "Nasila"
+//      },
+//      newEmploye :[],
+//      addEmploye(nomEmploye){
+//           molengeek.newEmploye.push(nomEmploye);
+//      },
+//      delEmploye(nomEmploye){
+
+//      },
+//      felicitation(){
+//           Math.random()
+//      }
+// }
+
+// console.log(molengeek);
+
 // - Créer une méthode "addEmploye" qui permet d'ajouter des employes dans le array newEmploye et une méthode "DelEmploye" de supprimer des employes. 
 // - Créer une méthode "Felicitation" qui va sélectionner au hasard(random) un des nouveaux employés et va se faire féliciter via une console.log par le patron. 
 // (Ex: nom du patron félicite l'employé)
@@ -625,7 +646,7 @@ voiture.maMethode();
 //           this.nom = nom;
 //           this.ville = ville;
 //           this.sePresenter = () => {
-//                console.log(`bonjour je m'appeller ${this.age}`);
+//                console.log(`bonjour je m'appelle ${this.age}`);
 //           }
 //      }
 // }
@@ -717,103 +738,184 @@ voiture.maMethode();
 
 
 
-// ## EXO4
+// // ## EXO4
 
-// ### Créez une class [Lieu] avec une propriété nom(string) et personnes(array vide).
-// ### Puis créez des instances de [Lieu]: MolenGeek, Snack et Maison
-// class Lieu {
+// // ### Créez une class [Lieu] avec une propriété nom(string) et personnes(array vide).
+// // ### Puis créez des instances de [Lieu]: MolenGeek, Snack et Maison
+
+// let Lieu = {
 //      constructor(nom, personnes){
-//          this.nom = nom;
-//          this.personnes = personnes;
-//      }
-//  }
- 
-//  let molengeek = new Lieu("Molengeek", []);
-//  let snack = new Lieu("Snack", []);
-//  let maison = new Lieu("Maison", []);
- 
-//  // ### Puis créez une class [Personne] avec une propriété nom(string), prenom(string), argent(number) et une methode seDeplacer(), cette methode permet de vous déplacer dans les differents lieux en faisant appel à la méthode embarquer() du bus ou en y allant à pieds.
-//  // ### Puis créez une instance de votre personnage.
- 
-// class Personne{
-//      constructor(nom, prenom, argent){
 //           this.nom = nom;
-//           this.prenom = prenom;
-//           this.argent = argent;
-//           this.seDeplacer = (depart, arrivee, transport)=> {
-//                if(transport == "pieds"){
-//                     console.log("va à pied");
-
-//                }else if(transport.embarquer(this) == true){
-//                     console.log("est dans le BUS");
-//                }else{
-//                     console.log('no money honey');
-//                }
-//                depart.personnes.splice(depart.personnes.indexOf(this),1);
-//                arrivee.personnes.push(this);
-
-//                console.log(`${this.prenom} est arrivée à ${arrivee.nom}`);
-//           }
+//           this.personnes = personnes;
 //      }
+
 // }
+
+// let molengeek = new Lieu("Molengeek", []); 
+// let snack = new Lieu("Snack", []);
+// let maison = Lieu("Maison", []); 
+
+ // ### Puis créez une class [Personne] avec une propriété nom(string), prenom(string), argent(number) et une methode seDeplacer(), cette methode permet de vous déplacer dans les differents lieux en faisant appel à la méthode embarquer() du bus ou en y allant à pieds.
+ // ### Puis créez une instance de votre personnage.
+ 
+//  class Personne{
+//       constructor(nom,prenom,argent){
+//            this.nom = nom;
+//            this.prenom = prenom;
+//            this.argent = argent;
+//            this.seDeplacer = (depart, arrivee, transport) =>{
+//                 if(transport == "pieds"){
+//                      console.log(`va à pieds`);
+//                 }else if(transport.embarquer(this) == true){
+//                      console.log("est dans le BUS");
+//                 }else{
+//                      console.log("no money honey");
+//                 }
+//            }
+//       }
+//  }
 
 
 //   // ### Créez une class [Bus] avec une propriéte personnes(array vide), une propriéte caisse(number) et une methode embarquer() (qui sera appelée dans la méthode seDeplacer() de la personne) qui va vérifier si vous possedez l'argent, si oui, il le déduit de votre argent, et le rajoute à sa caisse, et le personnage rentre dans le bus. Le bus coute 2.80. Sinon, il faut y aller à pied.
 //  // ### Créez une instance de Bus. 
 
 //  class Bus{
-//       constructor(personnes, caisse,){
+//       constructor(personnes, caisse){
 //            this.personnes = personnes;
 //            this.caisse = caisse;
 //            this.embarquer = (usager) =>{
 //                 if(usager.argent >= 2.80){
-//                    usager.argent -= 2.80;
-//                    this.caisse += 2.80;
-//                    this.personnes.push(usager); 
-//                    console.log(`${usager.prenom} est entré.e dans le bus`);
+//                      usager.argent -= 2.80;
+//                      this.caisse += 2.80;
+//                      this.personnes.push(usager);
+//                      console.log(` ${usager.prenom} est entré.e dans le bus `);
 
-//                    this.personnes.splice(this.personnes.indexOf(usager),1);
-//                    console.log(`${usager.prenom} est sorti.e du bus`);
-//                    return true;
+//                      this.personnes.splice(this.personnes.indexOf(usager),1);
+//                      console.log(` ${usager.prenom} est sorti.e du bus `);
+//                      return true;
 //                 }else{
-//                      console.log("marche biatch");
+//                      console.log(`marche biatch`);
 //                      return false;
-//                 } 
-
+//                 }
 //            }
 //       }
 //  }
- 
-//  let laStib = new Bus([], 0.00);
 
-//  let fanny = new Personne("Hunin", "Fanny", 10);
-
-//  // ### 8h00 Vous êtes à la maison.
-// maison.personnes.push(fanny);
-// console.log(maison.personnes);
- 
-//  // ### 8h30 Vous prennez le bus vers MolenGeek.
-
-//  fanny.seDeplacer(maison,molengeek, laStib );
+// ### 8h00 Vous êtes à la maison.
 
  
-//  // ### 8h45 Vous êtes à MolenGeek.
- 
- 
-//  // // ### 12h45 Vous sortez de MolenGeek, vous prenez le bus pour aller au snack.
+ // ### 8h30 Vous prennez le bus vers MolenGeek.
 
-//  fanny.seDeplacer(molengeek, snack, laStib);
- 
- 
-//  // // ### 13h30 Vous sortez du snack, et vous rentrer pied à MolenGeek pour digérer.
 
-//  fanny.seDeplacer(snack, molengeek, "pieds");
  
-//  // // ### 17h10 Vous sortez de MolenGeek, vous prenez le bus pour rentrer chez vous.
+ // ### 8h45 Vous êtes à MolenGeek.
  
-// fanny.seDeplacer(molengeek, maison, laStib);
+ 
+ // // ### 12h45 Vous sortez de MolenGeek, vous prenez le bus pour aller au snack.
 
-//  // // ### Faites un console.log() de votre argent, ainsi que l'argent du Bus
+ 
+ 
+ // // ### 13h30 Vous sortez du snack, et vous rentrer pied à MolenGeek pour digérer.
 
-//  console.log(fanny.argent);
-//  console.log(laStib.caisse);
+ 
+ // // ### 17h10 Vous sortez de MolenGeek, vous prenez le bus pour rentrer chez vous.
+ 
+
+ // // ### Faites un console.log() de votre argent, ainsi que l'argent du Bus
+
+
+//  let classeCoding19 = [];
+
+//  let ajouter = (prenom,phrase) =>{
+//       classeCoding19.push(prenom);
+//       console.log(phrase);
+//  }
+
+//  let retirer = (prenom, phrase, nbr) => {
+//       classeCoding19.splice(classeCoding19.indexOf(prenom),nbr);
+//       console.log(phrase);
+//  }
+
+//  ajouter("Fanny", "Il est 8h43, Fanny rentre en classe");
+//  ajouter("chris", "il est 8h44, chris allume son pc");
+//  console.log(classeCoding19);
+//  retirer("Fanny", "Fanny est sortie de la classe", 1);
+//  console.log(classeCoding19);
+
+// ## Exo3
+
+// ### Créer une class Objet
+// ### _Propriétés : nom, prix
+
+class Objet{
+     constructor(nom,prix){
+          this.nom = nom;
+          this.prix = prix;
+     }
+}
+
+
+
+// III
+// ### Créer deux instances d'objets avec un nom et un prix
+
+let piano = new Objet("piano", 5000);
+let basse = new Objet("basse", 1450 )
+
+// ### Créer une boite (tableau) et mettre les deux objets dedans.
+
+let boite = [];
+boite.push(piano);
+boite.push(basse);
+console.log(boite);
+
+
+// ### Créer une class Personnage
+// ### _Propriétés : nom(string), sac(tableau), argent(number)
+// ### _Méthode : prendre(objet, boite)
+// ### _Méthode : acheter(vendeur, objet)
+
+class Personnage{
+     constructor(nom, sac, argent){
+          this.nom = nom;
+          this.sac = sac;
+          this.argent = argent;
+          this.prendre = (objet,boite) => {
+               this.sac.push(objet);
+               boite.splice(boite.indexOf(objet),1);
+               console.log(`${this.nom} a mit un.e ${objet.nom} dans son sac`);
+
+          };
+          this.acheter = (vendeur, objet)=> {
+               if(this.argent >= objet.prix){
+                    this.argent -= objet.prix;
+                    vendeur.argent += objet.prix;
+
+                    this.sac.push(objet);
+                    vendeur.sac.splice(vendeur.sac.indexOf(objet),1);
+                    console.log(`${this.nom} a acheté un.e ${objet.nom} à ${vendeur.nom}`);
+               }else{
+                    console.log("no money");
+               }
+          }
+     }
+}
+
+
+// ### Créer deux instances de Personnage et faites leur chacun [prendre] un objet de la boite avec leur méthode.
+
+let naz = new Personnage("Naz", [], 8000);
+console.log(naz.argent);
+let moun = new Personnage("Moun",[], 10000);
+console.log(moun.nom);
+
+// ### Ensuite faites acheter à l'un des deux, l'objet de l'autre.
+
+naz.prendre(basse,boite);
+moun.prendre(piano,boite);
+
+naz.acheter(moun,piano);
+console.log(naz.argent);
+
+moun.acheter(naz, basse);
+console.log(moun.argent);
